@@ -1,3 +1,3 @@
-class Album < ApplicationRecord
-  has_many :songs, dependent: :destroy
+class Product < ApplicationRecord
+  has_many :reviews, dependent: :destroy
 end
