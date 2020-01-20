@@ -1,9 +1,9 @@
 class Review < ApplicationRecord
   belongs_to :product
-  before_save(:titleize_album)
+  before_save(:titleize_author)
 
 private
-  def titleize_album
+  def titleize_author
     self.author = self.author.titleize
   end
 end
