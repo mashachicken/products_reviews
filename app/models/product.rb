@@ -4,12 +4,12 @@ class Product < ApplicationRecord
   validates :cost, presence: true
   validates :country_of_origin, presence: true
   scope :most_reviews, -> {(
-  select("products.id, products.name, count(reviews.id) as reviews_count")
-  .joins(:reviews)
-  .group("products.id")
-  .order("reviews_count DESC")
-  .limit(10)
-  )}
-  scope :ten_most_recent, -> { order(created_at: :desc).limit(3)}
-  scope :search, -> (location_parameter) { where("country_of_origin like ?", "%#{location_parameter}%")}
-end
+    select("products.id, products.name, count(reviews.id) as reviews_count")
+    .joins(:reviews)
+    .group("products.id")
+    .order("reviews_count DESC")
+    .limit(10)
+    )}
+    scope :ten_most_recent, -> { order(created_at: :desc).limit(3)}
+    scope :search, -> (location_parameter) { where("country_of_origin like ?", "%#{location_parameter}%")}
+  end

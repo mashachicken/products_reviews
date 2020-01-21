@@ -1,8 +1,11 @@
 class ProductsController < ApplicationController
 
+  def new
+    @product = Product.new
+    render :new
+  end
   def index
     @products = Product.all
-    @products = Product.search(params[:country_of_origin])
     render :index
   end
 
