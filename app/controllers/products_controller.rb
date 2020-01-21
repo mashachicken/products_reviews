@@ -2,6 +2,7 @@ class ProductsController < ApplicationController
 
   def index
     @products = Product.all
+    @products = Product.search(params[:country_of_origin])
     render :index
   end
 

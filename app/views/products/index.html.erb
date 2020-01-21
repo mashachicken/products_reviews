@@ -1,5 +1,4 @@
 <h1>Products</h1>
-
 <% if @products.any? %>
   <ul>
     <% @products.each do |product| %>
@@ -9,6 +8,7 @@
 <% else %>
   <p>There are no products yet.</p>
 <% end %>
+
 
 
 <p><%= link_to "Create new product", new_product_path %></p>
