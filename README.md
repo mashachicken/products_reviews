@@ -13,7 +13,7 @@ _This program is designed to track, add and update products, as well as reviews 
 * _All products are automatically titleized_
 
 ## Setup/Installation Requirements
-* _Open the terminal and enter "git clone https://github.com/mashachicken/word-definer.git "_
+* _Open the terminal and enter "git clone https://github.com/mashachicken/products_reviews.git "_
 *  _In the terminal, run following commands: bundle install, rake db:create, rails server_
 * _Visit http://localhost:3000_
 
