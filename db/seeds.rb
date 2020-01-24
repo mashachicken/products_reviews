@@ -9,16 +9,15 @@ Product.destroy_all
 
 50.times do |index|
   product = Product.create!(name: Faker::Cannabis.cannabinoid,
-    cost: Faker::Number.within(range: 1..10)
+    cost: Faker::Number.within(range: 1..10),
     country_of_origin: Faker::Address.country )
+    product.save
 
-  end
-  50.times do |i|
+
     review = Review.create!(author: Faker::Cannabis.cannabinoid,
-      content_body: Faker::Number.within(range: 1..10)
+      content_body: Faker::Number.within(range: 1..10),
       rating: Faker::Number.within(range: 1..5))
+      review.save
 
     end
-    product.save
-    review.save
-p "Created #{Product.count} products and #{Product.count} reviews" 
+p "Created #{Product.count} products and #{Product.count} reviews"
