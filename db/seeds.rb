@@ -13,11 +13,10 @@ Product.destroy_all
     country_of_origin: Faker::Address.country )
     product.save
 
-
     review = Review.create!(author: Faker::Cannabis.cannabinoid,
       content_body: Faker::Number.within(range: 1..10),
-      rating: Faker::Number.within(range: 1..5))
+      rating: Faker::Number.within(range: 1..5), product_id: product.id)
       review.save
 
     end
-p "Created #{Product.count} products and #{Product.count} reviews"
+    p "Created #{Product.count} products and #{Product.count} reviews"
