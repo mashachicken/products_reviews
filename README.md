@@ -1,5 +1,5 @@
 # _Rails with Active Record Independent Project_
-#### 01.20.20
+#### 01.24.20
 #### By Masha Ivy
 ## Description
 _This program is designed to track, add and update products, as well as reviews for them_
