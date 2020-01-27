@@ -1,4 +1,5 @@
-<h3>Products</h3>
+<div class="w3-container w3-grey"> <h3>Products</h3>
+  </div>
 <% if @products.any? %>
 <ul>
   <% @products.each do |product| %>
@@ -7,6 +8,6 @@
 </ul>
 <% else %>
 <p>There are no products yet.</p>
-<% end %>
+<% end %> <br>
 
 <p><%= link_to "Create new product", new_product_path %></p>
