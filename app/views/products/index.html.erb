@@ -9,5 +9,9 @@
 <% else %>
 <p>There are no products yet.</p>
 <% end %> <br>
+<% if @most_reviews  %>
+<h5>The most reviewed products:</h5>
+<h4><%= link_to @most_reviews.name, product_path(@most_reviews)%></h4>
+<% end %>
 
 <p><%= link_to "Create new product", new_product_path %></p>
