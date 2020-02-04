@@ -1,9 +1,5 @@
 class ProductsController < ApplicationController
 
-  def new
-    @product = Product.new
-    render :new
-  end
   def index
     @products = Product.all
     @most_reviews = Product.most_reviews.first
